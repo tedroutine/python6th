@@ -1,11 +1,24 @@
-h1 {
-    color : blue;
-    text-align : center}
-
 body {
-    color:red;
-    height:50vh;
-    background-color: greenyellow;
-    background-image: url('background.jpg');
-    background-position: center center;
+    background: #f4f4f4;
+    font-family: arial, sans-serif;
+    line-height: 1.5em;
+}
+
+#container {
+    border: 1px #cccccc solid;
+    padding: 0 10px 0 10px;
+    width: 800px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.highlight {
+    color: rgb(24, 173, 173);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.left-side {
+    float: left;
+    width: 50%;
 }
