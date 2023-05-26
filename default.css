@@ -30,3 +30,41 @@ img {
     width: 300px;
     max-height: 300px;
 }
+
+#border-img {
+    border: 10px solid;
+    border-width: 10px;
+    border-image: url("border.png") 30 round;
+}
+
+#my-bg {
+    background-image: url("border.png"), url("background.jpg");
+    background-position: left top, right bottom;
+    background-repeat: repeat, no-repeat;
+    padding: 10px;
+    background-size: 50px 50px, cover;
+}
+
+#grad1 {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, red, yellow);
+}
+
+#grad2 {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to bottom right, red, yellow);
+}
+
+#grad3 {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(green, red, yellow);
+}
+
+#grad4 {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(circle, red, yellow);
+}
