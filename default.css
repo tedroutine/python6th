@@ -1,61 +1,32 @@
-h1 {
-    color: blueviolet;
-}
-
-a:hover {
-    color: green;
-    font-weight: bold;
-}
-
-a:active {
-    color: red;
-    font-weight: bold;
-}
-
-.myForm input:focus {
-    background-color: pink;
-    width: 300px;
-}
-
-.myForm input:active {
-    background-color: blue;
-    width: 500px;
-}
-
-.myList li:first-child {
-    color: antiquewhite;
-    font-weight: bold;
-}
-
-.myList li:last-child:hover {
-    color: brown;
-    font-weight: bolder;
-}
-
-.myList li:nth-child(3n) {
-    color: rgb(157, 255, 114);
-    font-weight: bolder;
-}
-
-.myList li:nth-child(even) {
-    background-color: lightblue;
-    font-weight: lighter;
-}
-
-.wrapper {
-    border: #000 1px solid;
-    width: 600px;
-    height: 400px;
-    position: relative;
-    left: 50px;
-    top: 100px;
-}
-
-.insider {
-    border: #ff0000 1px solid;
+#rounded1 {
+    background: lightblue;
+    color: white;
     width: 200px;
-    height: 100px;
-    position: absolute; /* 부모 class가 relative라면 자식 class는 그 relative 부모 기준으로 absolute으로 잡는다. fixed는 그 영역 고정. 스크롤 계속해도 고정되어서 보임*/
-    left: 50px;
-    top: 20px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#rounded2 {
+    background: orange;
+    color: white;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#rounded3 {
+    background: darkolivegreen;
+    color: white;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+img {
+    width: 300px;
+    max-height: 300px;
 }
