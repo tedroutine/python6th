@@ -56,13 +56,31 @@
 // document.write(text.toUpperCase() + "<br/>")
 // document.write(text.toLowerCase() + "<br/>")
 
-var text1 = " hi"
-var text2 = "bye"
-var text3 = text1.concat(text2);
-document.write(text3 + "<br/>")
+// var text1 = " hi"
+// var text2 = "bye"
+// var text3 = text1.concat(text2);
+// document.write(text3 + "<br/>")
 
-var text4 = "hello";
-var result = text4.slice(0,2)
-document.write(result + "<br/>")
-var result2 = text4.split('e')
-document.write(result2 + "<br/>")
+// var text4 = "hello";
+// var result = text4.slice(0,2)
+// document.write(result + "<br/>")
+// var result2 = text4.split('e')
+// document.write(result2 + "<br/>")
+
+// var num = 20
+// num = num.toString();
+// console.log(typeof num)
+
+// var x = 2.56
+// console.log(x.toFixed(1), typeof x.toFixed(1))
+// console.log(x.toFixed(2))
+
+var x = 2.56
+console.log(x.toPrecision(1), typeof x.toPrecision(1))
+console.log(x.toPrecision(2))
+
+console.log(Number(true))
+console.log(Number(false))
+console.log(Number("10"))
+console.log(Number(" 10"))
+console.log(Number("10.25"))
