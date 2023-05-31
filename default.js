@@ -245,35 +245,48 @@
 //     document.write(j+"<br/>")
 // }
 
-// 함수
-// 매개변수 없는 함수
-function message() {
-    document.write("Hello without parameter" + "<br/>")
+// // 함수
+// // 매개변수 없는 함수
+// function message() {
+//     document.write("Hello without parameter" + "<br/>")
+// }
+
+// // 매개변수 한 개 있는 함수
+// function messageName(name) {
+//     document.write("Hello " + name + "<br/>")
+// }
+
+// // 매개변수 두 개 있는 함수
+// function addition(num1, num2) {
+//     var sum = num1 + num2
+//     document.write(sum)
+// }
+
+// // 값을 반환하는 함수 return
+// function square(num) {
+//     return num * num
+// }
+
+// message();
+// messageName("Ted");
+// addition(1, 2);
+// document.write("<br/>");
+// document.write("2 * 2 = " + square(2) + "<br/>");
+
+// 즉시 실행 함수
+(function display(message) {
+    console.log(message);
+})("hi") 
+
+// 함수를 변수에 선언할 수도 있음.
+var display2 = function displayMessage(message) {
+    console.log(message);
 }
+display2("Hi");
 
-// 매개변수 한 개 있는 함수
-function messageName(name) {
-    document.write("Hello " + name + "<br/>")
-}
-
-// 매개변수 두 개 있는 함수
-function addition(num1, num2) {
-    var sum = num1 + num2
-    document.write(sum)
-}
-
-// 값을 반환하는 함수 return
-function square(num) {
-    return num * num
-}
-
-message();
-messageName("Ted");
-addition(1, 2);
-document.write("<br/>");
-document.write("2 * 2 = " + square(2) + "<br/>");
-
-
+(function addNumbers(num1, num2){
+    console.log(num1 + num2)
+}(3, 4));
 
 
 
