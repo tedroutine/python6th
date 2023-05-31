@@ -110,10 +110,34 @@
 // var area = base * height * 1
 // document.write("Area is : " + area)
 
-var cels = parseFloat(prompt("섭씨 입력 : "))
-var farn = cels * (9 / 5) + 32
-document.write("화씨 : " + farn)
+// var cels = parseFloat(prompt("섭씨 입력 : "))
+// var farn = cels * (9 / 5) + 32
+// document.write("화씨 : " + farn)
 
+var num1 = 20;
+var num2 = 10;
+var num3 = "10";
+var num4 = 20;
+var num5 = 15;
+
+console.log('일반크기 비교')
+console.log(num1 > num2, num1, '>', num2 )
+console.log(num1 >= num2, num1, '>=', num2 )
+console.log(num1 < num2, num1, '<', num2 )
+console.log(num1 <= num2, num1, '<=', num2 )
+
+console.log('같은지 여부 비교')
+console.log(num1 == num4, num1, '==', num4 )
+console.log(num1 != num4, num1, '!=', num4 )
+
+console.log('=== 비교 (타입)')
+console.log(num1 === num3, num1, '===', num3 )
+console.log(num2 === num3, num2, '===', num3 )
+console.log(num2 == num3, num2, '==', num3 )
+
+console.log('and(&&) or 연산자(||)')
+console.log('num1 > num2 && num1 >num5 : ', num1 > num2 && num1 >num5)
+console.log('num1 > num2 || num2 >num5 : ', num1 > num2 || num2 >num5)
 
 
 
