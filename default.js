@@ -229,21 +229,71 @@
 //     document.write('멋쟁이사자j : ' + j++ + "<br/>")
 // }
 
-// break
-for (var i = 1; i <= 100; i++ ) {
-    if (i == 20) {
-        break;
-    }
-    document.write(i+"<br/>")
+// // break
+// for (var i = 1; i <= 100; i++ ) {
+//     if (i == 20) {
+//         break;
+//     }
+//     document.write(i+"<br/>")
+// }
+// document.write("---------------------------------------" + "<br/>")
+// // continue
+// for (var j = 1; j <= 100; j++ ) {
+//     if (j == 20) {
+//         continue;
+//     }
+//     document.write(j+"<br/>")
+// }
+
+// 함수
+// 매개변수 없는 함수
+function message() {
+    document.write("Hello without parameter" + "<br/>")
 }
-document.write("---------------------------------------" + "<br/>")
-// continue
-for (var j = 1; j <= 100; j++ ) {
-    if (j == 20) {
-        continue;
-    }
-    document.write(i+"<br/>")
+
+// 매개변수 한 개 있는 함수
+function messageName(name) {
+    document.write("Hello " + name + "<br/>")
 }
+
+// 매개변수 두 개 있는 함수
+function addition(num1, num2) {
+    var sum = num1 + num2
+    document.write(sum)
+}
+
+// 값을 반환하는 함수 return
+function square(num) {
+    return num * num
+}
+
+message();
+messageName("Ted");
+addition(1, 2);
+document.write("<br/>");
+document.write("2 * 2 = " + square(2) + "<br/>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
