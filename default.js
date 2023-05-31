@@ -104,14 +104,15 @@
 // var result = num1 % num2
 // document.write("remain is : " + result + lineBreak)
 
-var base = parseFloat(prompt("enter 밑변 : "))
-var height = parseFloat(prompt("enter 높이 : "))
+// var base = parseFloat(prompt("enter 밑변 : "))
+// var height = parseFloat(prompt("enter 높이 : "))
 
-var area = base * height * 1
-document.write("Area is : " + area)
+// var area = base * height * 1
+// document.write("Area is : " + area)
 
-
-
+var cels = parseFloat(prompt("섭씨 입력 : "))
+var farn = cels * (9 / 5) + 32
+document.write("화씨 : " + farn)
 
 
 
