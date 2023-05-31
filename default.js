@@ -288,41 +288,69 @@
 //     console.log(num1 + num2)
 // }(3, 4));
 
-// 배열
-var names = new Array(20);
+// // 배열
+// var names = new Array(20);
 
-names[0] = '지훈'
-names[1] = '은영'
+// names[0] = '지훈'
+// names[1] = '은영'
 
-console.log(names[0], " " + names[1])
+// console.log(names[0], " " + names[1])
 
-// 값을 가진 배열 생성
-var students = ["지훈", "은영", "수진", "준호"];
+// // 값을 가진 배열 생성
+// var students = ["지훈", "은영", "수진", "준호"];
 
-console.log("전체 학생 리스트 : " + students)
-console.log("첫 번째 학생은 " + students[0])
+// console.log("전체 학생 리스트 : " + students)
+// console.log("첫 번째 학생은 " + students[0])
 
-// 배열 길이
-console.log(students.length);
+// // 배열 길이
+// console.log(students.length);
 
-// 배열에 요소 추가
-students.push("지호");
-console.log("추가 이후 전체 학생 리스트 : " + students)
+// // 배열에 요소 추가
+// students.push("지호");
+// console.log("추가 이후 전체 학생 리스트 : " + students)
 
-// 배열에 요소 삭제
-// pop : 마지막 요소만 제거됨
-students.pop();
-console.log("삭제 이후 전체 학생 리스트 : " + students)
+// // 배열에 요소 삭제
+// // pop : 마지막 요소만 제거됨 splice(start_index, end_index)
+// students.pop();
+// // students.splice(1,2);
+// console.log("삭제 이후 전체 학생 리스트 : " + students)
 
-// 배열 연결
-var numArray1 = [10, 20]
-var numArray2 = [30, 40, 50, 60]
-var numArrays = numArray1.concat(numArray2)
-console.log(numArrays)
+// // 배열 연결
+// var numArray1 = [10, 20]
+// var numArray2 = [30, 40, 50, 60]
+// var numArrays = numArray1.concat(numArray2)
+// console.log(numArrays)
 
-// 단순히 합치는 것은 문자열 합치는 것처럼 합쳐짐
-console.log(numArray1 + numArray2)
+// // 단순히 합치는 것은 문자열 합치는 것처럼 합쳐짐
+// console.log(numArray1 + numArray2)
 
+// Date
+var date = new Date();
+console.log(date);
+
+// year
+var year = date.getFullYear();
+console.log(year);
+
+// month : 0부터 시작
+var month = date.getMonth();
+console.log(month);
+
+// date
+var currentDate = date.getDate();
+console.log(currentDate);
+
+// Day of the week
+var currentDay = date.getDay();
+console.log(currentDay);
+
+// Hours
+var currentHour = date.getHours();
+console.log(currentHour);
+
+// Minutes
+var currentMinute = date.getMinutes();
+console.log(currentMinute);
 
 
 
