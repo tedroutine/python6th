@@ -2,46 +2,21 @@ from array import *
 # import array
 
 stu_roll = array('i', [101, 102, 103, 104, 105])
+
+print("array index() method")
+print(stu_roll.index(102))
+
+print("extend() method")
+arr = array('i', [201, 202, 203, 204, 205])
+stu_roll.extend(arr)
 n = len(stu_roll)
 i = 0
 while i < n:
     print(stu_roll[i])
     i += 1
 
-print("Array After Insert")
-
-# insert
-stu_roll.insert(1, 106)
-stu_roll.insert(3, 107)
-n = len(stu_roll)
-i = 0
-while i < n:
-    print(stu_roll[i])
-    i += 1
-
-print("Array After Remove")
-
-# remove
-stu_roll.remove(107)
-n = len(stu_roll)
-i = 0
-while i < n:
-    print(stu_roll[i])
-    i += 1
-
-print("Array After Pop")
-
-# pop
-stu_roll.pop()
-n = len(stu_roll)
-i = 0
-while i < n:
-    print(stu_roll[i])
-    i += 1
-
-print("Array After Pop(n)") # n번째 요소 삭제
-# pop
-stu_roll.pop(2)
+print("reverse() method")
+stu_roll.reverse()
 n = len(stu_roll)
 i = 0
 while i < n:
