@@ -14,8 +14,8 @@ print(slice_numbers)
 
 numbers_copy = numbers.copy()
 print(numbers_copy)
-id(numbers_copy)
+print(id(numbers_copy))
 
 numbers_clone = numbers[:]
 print(numbers_clone)
-id(numbers_copy)
+print(id(numbers_clone))
