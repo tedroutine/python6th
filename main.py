@@ -1,34 +1,18 @@
 a = 50
 
-
 def show():
-    x = 10
-    print(x)
-    print(a)
-
+    a = 10
+    print("A: ", a)
 
 show()
-
-print("global a : ", a)
-
-i = 0
+print("A: ", a)
 
 
-def myfun():
-    a = i + 1
-    print("My Function", a)  # read local variables first
+def show2():
+    global a # global 변수를 가지고 올 수 있음.
+    print("show2-A: ", a)
+    a = 20
+    print("show2-A2: ", a)
 
-
-myfun()
-print("global a : ", a)
-
-i = 0
-
-
-def myfun2():
-    t = 0
-    t = t + 1  # global 변수와 local 변수가 같아서 오류가 생긴다. global 변수를 read할 수 있지만 로컬과 같았을 때는 충돌
-    print(t)
-
-
-myfun2()
+show2()
+print("A: ", 2)
