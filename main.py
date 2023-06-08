@@ -1,24 +1,21 @@
 fruits = ['apple', 'banana', 'cherry', 'mango']
+veges = ["onion", 'garlic']
 
-fruits.append('strawberry')
+grocery = fruits + veges
+print(grocery)
 
-print(fruits)
+numbers = [10, 5, 8, 1, 7]
+numbers.sort()
 
-fruits.insert(0, 'blueberry')
+print(numbers)
 
-print(fruits)
+slice_numbers = numbers[1:4]
+print(slice_numbers)
 
-print(fruits.pop())
-print(fruits)
-print(fruits.pop(1))
-print(fruits)
+numbers_copy = numbers.copy()
+print(numbers_copy)
+id(numbers_copy)
 
-fruits.insert(0, 'cherry')
-print(fruits)
-print(fruits.index("cherry"))
-fruits.remove("cherry") # 첫 번째 요소만 제거 / 그리고 return 값도 없고 제거 하고 끝
-print(fruits.index("cherry"))
-print(fruits)
-fruits.reverse()
-print(fruits)
-
+numbers_clone = numbers[:]
+print(numbers_clone)
+id(numbers_copy)
