@@ -1,16 +1,26 @@
-# lambda 함수
+# decorator
 
-show = lambda x : print(x)
+def decor(fun):
+    def inner():
+        a = fun()
+        add = a + 5
+        return add
 
-show(5)
+    return inner
 
-add = lambda x, y : (x + y)
-print(add(5, 2))
 
-add_sub = lambda x, y : (x + y, x - y)
-a, s = add_sub(5, 2)
-print(a)
-print(s)
+def num():
+    return 10
 
-add = lambda x, y=3 : (x + y)
-print(add(5))
+
+result_fun = decor(num)
+print(result_fun())
+
+
+
+# 간단하게 만들어 보자 @함수 는 아래 함수를 감싼다. 즉, 아래 함수를 @함수에 넣어줘!
+@decor
+def num():
+    return 10
+
+print(num())
