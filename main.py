@@ -1,10 +1,12 @@
-# 사용자 입력으로 리스트 만들기
+# 제너레이터
 
-user_input_list = []
-num_elements = int(input("Enter number of element: "))
-for i in range(num_elements):
-    user_input_list.append(input("enter element:"))
+def fibonacchi_generator(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a+b
 
-print(user_input_list)
-for elements in user_input_list:
-    print(elements)
+fs = fibonacchi_generator(10)
+
+for num in fs:
+    print(num)
