@@ -1,12 +1,16 @@
 # 제너레이터
 
-def fibonacchi_generator(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a+b
+def generator_alphabet(start_letter, end_letter):
+    start = ord(start_letter)
+    end = ord(end_letter)
 
-fs = fibonacchi_generator(10)
+    list = []
+    while start <= end:
+        list.append(chr(start))
+        start += 1
+    return list
 
-for num in fs:
-    print(num)
+runner = generator_alphabet('A', 'F')
+
+for letter in runner:
+    print(letter)
