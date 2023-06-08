@@ -1,4 +1,4 @@
-# def val(lst):
+def val(lst):
     print("inside Function Before Append", lst, id(list))
     lst.append(4)
     print("inside Function Before Append", lst, id(list))
