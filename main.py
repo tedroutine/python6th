@@ -1,43 +1,48 @@
-a = {10, 20, 30}
-a = {10, 20, 30, 'LikeLion', "bae", 40}
-a = {10, 20, 30, 'LikeLion', "bae", 40, 10, 20}
+# dictionary
+stu = {101: 'Kim', 102: 'Bae', 103: 'Hong'}
+fees = {'kim': 2000, 'bae':3000, 'hong':8000}
+print(stu[101])
+print(stu[102])
+print(stu[103])
 
-b = set()
-a.add(50)
-print(a)
+print(fees['kim'])
+print(fees['bae'])
+print(fees['hong'])
 
-print(a, type(a))
+stu[102] = 'Python'
+print(stu[102])
 
-a.discard(10)
-a.discard(11) # discard는 remove와 달리 삭제할 값이 없으면 그냥 pass
-print(a)
+stu[104] = 'Like Lion'
+print(stu)
 
-new_set = a.copy()
-new_set.add(100)
-print(new_set)
+del stu[102]
+print(stu)
 
-# 교집합 : intersaction
-intersactoin_a = a.intersection(new_set)
-print("intersactoin_a : ", intersactoin_a)
+# stu.clear()
+# print(stu)
 
-# 합집합 : union
-union_a = a.union(new_set)
-print("union_a : ", union_a)
+key = (101, 102, 103)
+value = 'like lion'
+new_stu = dict.fromkeys(key, value)
+print(new_stu)
 
-# 차집합 : difference : A 기준으로 B와 다른 것만 return
-difference_a = new_set.difference(a)
-print(a)
-print(new_set)
-print("difference_a : ", difference_a)
+print(stu.items())
+print(stu.keys())
+print(stu.values(), type(stu.values()))
 
-# issubset : 하위 집합, issuperset : 상위 집합
-print(a.issubset(new_set))
-print(new_set.issuperset(a))
+stu.update({102: 'Lee'})
+print(stu)
 
-# 대칭 차집합 : symmetric_difference
-sym_a = a.symmetric_difference(new_set)
-print('symmetric_difference: ', sym_a)
+# dict에서 102(key 값)으로 제거 가능
+stu.pop(102)
+print(stu)
 
+print(stu.popitem())
+print(stu)
+print(stu.popitem())
+print(stu)
+print(stu.popitem())
+print(stu)
 
 
 
