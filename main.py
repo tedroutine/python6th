@@ -1,20 +1,15 @@
-def val(lst):
-    print("inside Function Before Append", lst, id(list))
-    lst.append(4)
-    print("inside Function Before Append", lst, id(list))
+# 재귀 함수
+import sys
 
-list = [1, 2, 3]
-print("Before Calling Function: ", list, id(list))
-val(list)
-print("After Calling Function: ", list, id(list))
+# 재귀함수에 limit을 거는 함수
+sys.setrecursionlimit(3000)
 
+print("default: ", sys.setrecursionlimit(3000))
+i = 0
+def myfun():
+    global i
+    i += 1
+    print("my function is ", i)
+    myfun()
 
-def val2(x):
-    print("Inside : ", id(x))
-    x += 1
-    print("Inside After : ", id(x))
-
-x = 10
-print("Before Calling Function: ", x, id(x))
-val2(x)
-print("After Calling Function: ", x, id(x))
+myfun()
