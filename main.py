@@ -1,15 +1,16 @@
-# 재귀 함수
-import sys
+# lambda 함수
 
-# 재귀함수에 limit을 거는 함수
-sys.setrecursionlimit(3000)
+show = lambda x : print(x)
 
-print("default: ", sys.setrecursionlimit(3000))
-i = 0
-def myfun():
-    global i
-    i += 1
-    print("my function is ", i)
-    myfun()
+show(5)
 
-myfun()
+add = lambda x, y : (x + y)
+print(add(5, 2))
+
+add_sub = lambda x, y : (x + y, x - y)
+a, s = add_sub(5, 2)
+print(a)
+print(s)
+
+add = lambda x, y=3 : (x + y)
+print(add(5))
