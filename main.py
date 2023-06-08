@@ -1,18 +1,24 @@
-a = 50
+fruits = ['apple', 'banana', 'cherry', 'mango']
 
-def show():
-    a = 10
-    print("A: ", a)
+fruits.append('strawberry')
 
-show()
-print("A: ", a)
+print(fruits)
 
+fruits.insert(0, 'blueberry')
 
-def show2():
-    global a # global 변수를 가지고 올 수 있음.
-    print("show2-A: ", a)
-    a = 20
-    print("show2-A2: ", a)
+print(fruits)
 
-show2()
-print("A: ", 2)
+print(fruits.pop())
+print(fruits)
+print(fruits.pop(1))
+print(fruits)
+
+fruits.insert(0, 'cherry')
+print(fruits)
+print(fruits.index("cherry"))
+fruits.remove("cherry") # 첫 번째 요소만 제거 / 그리고 return 값도 없고 제거 하고 끝
+print(fruits.index("cherry"))
+print(fruits)
+fruits.reverse()
+print(fruits)
+
