@@ -1,15 +1,13 @@
-def display_info(**kwargs):
-    for key, value in kwargs.items():
-        print(f"{key}:{value}")
+def pw(x, y):
+    z = x ** y
+    print(z)
 
-# display_info(name="tes", age=25)
+pw(2, 3)
 
+print('--------')
 
-def disp(sh):
-    print(type(sh))
-    print("Disp Function" + sh())
+def show(name, age):
+    print(f"name : {name} , Age : {age}")
 
-def show():
-    return " Show Function"
+show(age = 25, name = "Ted")
 
-disp(show)
