@@ -1,16 +1,13 @@
-# 제너레이터
+a = {10, 20, 30}
+a = {10, 20, 30, 'LikeLion', "bae", 40}
+a = {10, 20, 30, 'LikeLion', "bae", 40, 10, 20}
 
-def generator_alphabet(start_letter, end_letter):
-    start = ord(start_letter)
-    end = ord(end_letter)
+b = set()
+a.add(50)
+print(a)
 
-    list = []
-    while start <= end:
-        list.append(chr(start))
-        start += 1
-    return list
+print(a, type(a))
 
-runner = generator_alphabet('A', 'F')
-
-for letter in runner:
-    print(letter)
+a.discard(10)
+a.discard(11) # discard는 remove와 달리 삭제할 값이 없으면 그냥 pass
+print(a)
