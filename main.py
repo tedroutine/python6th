@@ -1,35 +1,36 @@
-# class 2
+class ParentClass:
+    def __init__(self):
+        self.name = 'parent'
+        self.number = 10
 
-class Quote:
-    def __init__(self, person, words):
-        self.person = person
-        self.words = words
+    def __str__(self):
+        return f'ParentClass name : {self.name}, number : {self.number}'
 
-    def who(self):
-        return self.person
+    def add_num(self, new_number):
+        print('부모 : ', new_number, '만큼 더해야지')
+        self.number += new_number
 
-    def say(self):
-        return self.words + '.'
+class ChildClass(ParentClass):
+    def __init__(self):
+        super().__init__()  # 부모 class 바로 가져와서 그대로 받아들임. __init__ 함수 빼고 pass와 같음
+        self.name = 'child'
 
+    def __str__(self):
+        return f'ChildClass name : {self.name}, number : {self.number}'
 
-class Quote1(Quote):
-    def say(self):
-        return self.words + '!'
+    def add_num(self, new_number):
+        print('말 안듣는 자식: 고정적으로 5를 더할건데?')
+        self.number += 5
 
+parent = ParentClass()
+child = ChildClass()
+print(parent)
+print(child)
+print('---------------')
 
-class Quote2(Quote):
-    def say(self):
-        return self.words + '?'
+print('7일을 더하세요.')
+parent.add_num(7)
+child.add_num(7)
 
-
-quote = Quote("person1", "what's up1")
-quote1 = Quote1("person2", "what's up2")
-quote2 = Quote2("person3", "what's up3")
-
-a = quote
-b = quote1
-c = quote2
-
-print(a.who(), a.say())
-print(b.who(), b.say())
-print(c.who(), c.say())
+print(parent)
+print(child)
