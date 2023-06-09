@@ -10,6 +10,7 @@ class ParentClass:
         print('부모 : ', new_number, '만큼 더해야지')
         self.number += new_number
 
+
 class ChildClass(ParentClass):
     def __init__(self):
         super().__init__()  # 부모 class 바로 가져와서 그대로 받아들임. __init__ 함수 빼고 pass와 같음
@@ -21,6 +22,7 @@ class ChildClass(ParentClass):
     def add_num(self, new_number):
         print('말 안듣는 자식: 고정적으로 5를 더할건데?')
         self.number += 5
+
 
 parent = ParentClass()
 child = ChildClass()
