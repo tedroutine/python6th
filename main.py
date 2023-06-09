@@ -1,26 +1,25 @@
-# decorator
-
-def decor(fun):
-    def inner():
-        a = fun()
-        add = a + 5
-        return add
-
-    return inner
-
-
-def num():
-    return 10
-
-
-result_fun = decor(num)
-print(result_fun())
+class Mobile:
+    fp = 'yes'
 
 
 
-# 간단하게 만들어 보자 @함수 는 아래 함수를 감싼다. 즉, 아래 함수를 @함수에 넣어줘!
-@decor
-def num():
-    return 10
+realme = Mobile()  # Mobile() : 생성자 함수이고, 인스턴스에 메모리를 할당하는 것
+redme = Mobile()
+geek = Mobile()
 
-print(num())
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
+
+Mobile.fp = 'no'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
+
+realme.fp = 'idk' # 인스턴스 네임스페이스
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
