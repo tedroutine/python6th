@@ -11,4 +11,4 @@ class Monster:
 
 shark = Monster('shark', 7)
 wolf = Monster('wolf', 3)
-shark.say();
+shark.say()
