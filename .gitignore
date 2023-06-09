@@ -4,3 +4,6 @@
 # ignore IntelliJ
 *.idea
 
+# practice txt file
+new_example.txt
+list_example.txt
