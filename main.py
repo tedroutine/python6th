@@ -1,25 +1,14 @@
-class Mobile:
-    fp = 'yes'
+# class
+
+class Monster:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def say(self):
+        print(f"I am {self.name} and my age is {self.age}")
 
 
-
-realme = Mobile()  # Mobile() : 생성자 함수이고, 인스턴스에 메모리를 할당하는 것
-redme = Mobile()
-geek = Mobile()
-
-print(Mobile.fp)
-print(realme.fp)
-print(redme.fp)
-print(geek.fp)
-
-Mobile.fp = 'no'
-print(Mobile.fp)
-print(realme.fp)
-print(redme.fp)
-print(geek.fp)
-
-realme.fp = 'idk' # 인스턴스 네임스페이스
-print(Mobile.fp)
-print(realme.fp)
-print(redme.fp)
-print(geek.fp)
+shark = Monster('shark', 7)
+wolf = Monster('wolf', 3)
+shark.say();
