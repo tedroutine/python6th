@@ -1,28 +1,22 @@
-# class 실습
-class Car:
-    # 클래스 속성
-    wheels = 4
+# inheritance class
 
-    def __init__(self, make, model, color):
+class Vehicle:
+    def __init__(self, make, model, year):
         self.make = make
         self.model = model
-        self.color = color
+        self.year = year
 
-    def drive(self):  # method
-        return "The car is Moving!"
-
-    def stop(self):
-        return "The car has been stopped."
+    def start_engine(self):
+        return "The engine is running."
 
 
-# 인스턴스 선언
-my_car = Car("Kia", "Morning", "Red")
+class Car(Vehicle):
+    def start_engine(self):
+        return super().start_engine() + " " + "It is a car engine."
 
-# 인스턴스 속성 사용
-print(my_car.make)
-print(my_car.model)
-print(my_car.color)
 
-# 메소드 호출
-print(my_car.drive())
-print(my_car.stop())
+his_car = Vehicle("Toyota", 'Corolla', 2020)
+my_car = Car("Toyota", 'Corolla', 2020)
+
+print(his_car.start_engine())
+print(my_car.start_engine())
