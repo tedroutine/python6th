@@ -1,4 +1,3 @@
-a = ['a1', 'b2', 'c3']
+import pprint
 
-result = list(enumerate(a))
-print(result)
+pprint.pprint(locals())
