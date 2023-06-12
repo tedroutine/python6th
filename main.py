@@ -1,16 +1,28 @@
-import os
+# class 실습
+class Car:
+    # 클래스 속성
+    wheels = 4
 
-current_directory = os.getcwd()
-print(current_directory)
+    def __init__(self, make, model, color):
+        self.make = make
+        self.model = model
+        self.color = color
 
-# os.mkdir('new_directory')
-# os.makedirs('parent_directory/child_directory/grandchild_directory')
+    def drive(self):  # method
+        return "The car is Moving!"
 
-# os.rmdir('new_directory')
+    def stop(self):
+        return "The car has been stopped."
 
-# os.removedirs('parent_directory/child_directory/grandchild_directory')
 
-for dirpath, dirnames, filenames in os.walk('.'):
-    print(f"directory paths : {dirpath}")
-    print(f"directory dir_name : {dirnames}")
-    print(f"directory file_name : {filenames}")
+# 인스턴스 선언
+my_car = Car("Kia", "Morning", "Red")
+
+# 인스턴스 속성 사용
+print(my_car.make)
+print(my_car.model)
+print(my_car.color)
+
+# 메소드 호출
+print(my_car.drive())
+print(my_car.stop())
