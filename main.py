@@ -1,24 +1,33 @@
-# multi inheritance class -> 복잡도 증가해서 잘 안쓰는 것이 좋고, 나의 Class를 다중 상속으로 받는건 잘못되었다. Class를 잘 만들면 됨
+# 예외가 하나인 경우
+def devide(x, y):
+    try:
+        result = x / y
+        print(f"x / y = {result}")
+    except:
+        print("Error!")
+    finally:
+        print("This is Math!")
 
-class Engine:
-    def start(self):
-        return "Engine started"
+devide(10, 2)
 
-    def stop(self):
-        return "Engine stopped"
-
-
-class Wheels:
-    def rotate(self):
-        return "Wheels are rotating"
+# 예외가 하나 이상인 경우
+try:
+    number = 5 + int("not a number")
+except ValueError:
+    print("error - invalid number")
+except TypeError:
+    print("error - invalid type")
 
 
-# 다중 상속
-class Car(Engine, Wheels):
-    pass
+# custom exception
+
+class CustomException(Exception):
+    def __init__(self, message):
+        self.message = message
+
+try:
+    raise CustomException("This is a custom exception.")
+except CustomException as e:
+    print(f"Error: {e.message}")
 
 
-my_car = Car()
-print(my_car.start())
-print(my_car.stop())
-print(my_car.rotate())
