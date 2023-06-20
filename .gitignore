@@ -7,3 +7,6 @@
 # practice txt file
 new_example.txt
 list_example.txt
+
+# ignore DB
+/myproject/db.sqlite3
