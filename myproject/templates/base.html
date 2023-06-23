@@ -9,7 +9,15 @@
         {% block title %}My Site{% endblock%}
     </title>
 </head>
-<body>
+<body style="display: flex; flex-diretion: row; align-items: center">
+    <div id="side-bar">
+        {% block sidebar %}
+            <ul>
+                <li><a href="/">Porject_Home</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+        {% endblock sidebar %}
+    </div>
     <div>
         {% block content %}{% endblock %}
     </div>
