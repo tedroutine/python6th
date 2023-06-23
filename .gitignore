@@ -11,5 +11,4 @@ list_example.txt
 # ignore DB
 /myproject/db.sqlite3
 
-# ignore log
 *.log
