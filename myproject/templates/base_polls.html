@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} Polls Application Site {% endblock title %}</title>
+
+{% block sidebar %}
+{#    {{ block.super }} : base.html의 sidebar를 실행해주고 아래 것을 추가해준다. #}
+    {{ block.super }}
+    <ul>
+        <li><a href="/polls/">Polls Home</a></li>
+    </ul>
+{% endblock sidebar %}
