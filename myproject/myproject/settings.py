@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    "books.apps.BooksConfig",
     "polls.apps.PollsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -122,21 +123,20 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatter': {
+    'formatters': {
+        'verbose': {
+            'format': '[%(asctime)s] [%(levelname)s] %(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S'
+        }
+    },
+    'handlers': {
         'console': {
-            'format': '%(asctime)s %(levelname)s %(message)s',
-        }
-    },
-    'handler': {
-        'consol': {
             'class': 'logging.StreamHandler',
-            'formatter': 'console',
-        }
+            'formatter': 'verbose'
+        },
     },
-    'logger': {
-        'django': {
-            'level': 'INFO',
-            'handlers': ['console']
-        }
+    'root': {
+        'level': 'INFO',
+        'handlers': ['console']
     }
 }
