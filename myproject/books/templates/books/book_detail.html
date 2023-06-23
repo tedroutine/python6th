@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{#    object : 받아오는 데이터를 그냥 표현한거임#}
+    <h1>{{ object.title }}</h1>
+    <ul>
+        <li>
+            Authors:
+            {% for author in object.authors.all %}
+                {{ author }}
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </li>
+
+        <li>
+            Publisher: {{ object.publisher }}
+        </li>
+        <li>
+            Publication data : {{ object.publication_date }}
+        </li>
+    </ul>
+{#endblock에 content를 붙이면 block content 콤보로 다닌다. 코드 길어질때 필요 #}
+{% endblock content %}
